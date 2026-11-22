@@ -43,18 +43,19 @@ python search.py --db .\demo.db --query "how does RRF merge search results" --ch
 {
   "mcpServers": {
     "sqlite-rag": {
-      "command": "C:\\path\to\local-\sqlite-rag\\.venv\\Scripts\\python.exe",
+      "command": "C:\\path\\to\\local-sqlite-rag\\.venv\\Scripts\\python.exe",
       "args": [
-        "C:\\path\to\local-\sqlite-rag\\server.py"
+        "C:\\path\\to\\local-sqlite-rag\\server.py"
       ],
       "env": {
-        "RAG_DB_PATH": "C:\\path\to\local-\sqlite-rag\\demo.db",
+        "RAG_DB_PATH": "C:\\path\\to\\local-sqlite-rag\\demo.db",
         "LM_STUDIO_URL": "http://localhost:1234/v1",
         "EMBED_MODEL": "text-embedding-bge-m3"
       }
     }
   }
 }
+
 ```
 
 ## Лицензия
