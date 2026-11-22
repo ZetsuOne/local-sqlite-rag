@@ -1,27 +1,18 @@
 from __future__ import annotations
-
 import argparse
 import re
 from collections import defaultdict
-
 from openai import OpenAI
-
 from db import connect
 from ingest import quantize_int8
-
-
 def escape_fts5(query: str) -> str:
     tokens = re.findall(r"\w+", query, flags=re.UNICODE)
     if not tokens:
         return '""'
     return " OR ".join(f'"{t}"' for t in tokens)
-
-
 def embed_query(client: OpenAI, model: str, query: str) -> bytes:
     resp = client.embeddings.create(model=model, input=[query])
     return quantize_int8(resp.data[0].embedding)
-
-
 def search_vec(conn, query_vec: bytes, series: str | None, limit: int = 20):
     if series:
         rows = conn.execute(
@@ -51,8 +42,6 @@ def search_vec(conn, query_vec: bytes, series: str | None, limit: int = 20):
             (query_vec, limit),
         ).fetchall()
     return rows
-
-
 def search_fts(conn, query: str, series: str | None, limit: int = 20):
     fts_query = escape_fts5(query)
     if series:

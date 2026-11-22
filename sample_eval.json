@@ -1,0 +1,14 @@
+[
+  {
+    "query": "How does Reciprocal Rank Fusion merge vector and full-text search results?",
+    "series": null,
+    "expected_title_substr": ["readme", "architecture", "rag", "sample"],
+    "expected_keywords": ["RRF", "FTS5", "vector"]
+  },
+  {
+    "query": "What embedding quantization format is used in SQLite vec0 table?",
+    "series": null,
+    "expected_title_substr": ["readme", "architecture", "rag", "sample"],
+    "expected_keywords": ["int8", "1024", "vec0"]
+  }
+]

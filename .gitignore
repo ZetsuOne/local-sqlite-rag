@@ -5,3 +5,5 @@ __pycache__/
 *.db-shm
 *.bat
 private_docs/
+*_eval.json
+!sample_eval.json
