@@ -1,0 +1,5 @@
+PCIe Bandwidth and Local Inference Reference
+
+A PCIe 3.0 x16 slot provides roughly 15.75 GB/s of bidirectional bandwidth, while a PCIe 3.0 x4 slot provides around 3.94 GB/s. For local LLM inference, PCIe bandwidth primarily affects model loading times into VRAM rather than token generation speed, provided the model weights and KV cache fit entirely inside GPU memory.
+
+Quantizing embedding vectors from float32 to int8 reduces vector index storage footprint by 4x and accelerates distance calculations on CPU and local storage with minimal recall degradation.
