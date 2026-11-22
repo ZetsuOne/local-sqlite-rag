@@ -12,7 +12,7 @@
 ## Установка
 
 ```powershell
-cd C:\(\path\to\local-\)sqlite-rag
+cd C:\\path\to\local-\sqlite-rag
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
@@ -43,12 +43,12 @@ python search.py --db .\demo.db --query "how does RRF merge search results" --ch
 {
   "mcpServers": {
     "sqlite-rag": {
-      "command": "C:\(\path\to\local-\)sqlite-rag\\.venv\\Scripts\\python.exe",
+      "command": "C:\\path\to\local-\sqlite-rag\\.venv\\Scripts\\python.exe",
       "args": [
-        "C:\(\path\to\local-\)sqlite-rag\\server.py"
+        "C:\\path\to\local-\sqlite-rag\\server.py"
       ],
       "env": {
-        "RAG_DB_PATH": "C:\(\path\to\local-\)sqlite-rag\\demo.db",
+        "RAG_DB_PATH": "C:\\path\to\local-\sqlite-rag\\demo.db",
         "LM_STUDIO_URL": "http://localhost:1234/v1",
         "EMBED_MODEL": "text-embedding-bge-m3"
       }
@@ -56,9 +56,6 @@ python search.py --db .\demo.db --query "how does RRF merge search results" --ch
   }
 }
 ```
-
-## Автор
-- **ZetsuOne** — [://github.com](https://://github.com)
 
 ## Лицензия
 Проект распространяется под лицензией [MIT](LICENSE).
