@@ -40,7 +40,7 @@ def _rrf_merge(vec_rows, fts_rows, k: int = 60):
 
 
 @mcp.tool()
-def search_knowledge_base(query: str, series: str | None = None, top_k: int = 5) -> str:
+def search_knowledge_base(query: str, series: str | None = None, top_k: int = 10) -> str:
     """Поиск релевантных фрагментов по локальной базе знаний (гибридный векторный + полнотекстовый поиск).
     Используй этот инструмент для поиска фактов, цитат, имён и деталей в проиндексированных документах.
     """
