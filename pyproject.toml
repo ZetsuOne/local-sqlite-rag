@@ -1,0 +1,30 @@
+[project]
+name = "local-sqlite-rag"
+version = "0.1.0"
+description = "Local hybrid RAG engine on SQLite (sqlite-vec int8 + FTS5 BM25 + RRF) with MCP server"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "openai>=1.50.0",
+    "sqlite-vec>=0.1.6",
+    "pypdf>=5.0.0",
+    "mcp>=1.2.0",
+]
+
+[project.scripts]
+local-sqlite-rag = "server:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = [
+    "db",
+    "parsers",
+    "ingest",
+    "search",
+    "server",
+    "eval",
+]

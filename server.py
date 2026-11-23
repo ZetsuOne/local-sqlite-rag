@@ -87,5 +87,9 @@ def list_series() -> str:
     return "\n".join(f"- {s}: {cnt} файл(ов)" for s, cnt in rows)
 
 
-if __name__ == "__main__":
+def main() -> None:
     mcp.run()
+
+
+if __name__ == "__main__":
+    main()
